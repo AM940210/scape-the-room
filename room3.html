@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rum 3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Rum 3 - Matcha föremål med rätt plats</h1>
+    <p>Dra föremålen till rätt mål för att låsa upp dörren.</p>
+
+    <div id="game">
+        <!-- Draggable items -->
+         <div class="draggable-items">
+            <div class="item" draggable="true" id="key" data-match="key">🔑</div>
+            <div class="item" draggable="true" id="book" data-match="shelf">📘</div>
+            <div class="item" draggable="true" id="hammer" data-match="toolbox">🔨</div>
+         </div>
+
+        <!-- Drop targets -->
+         <div class="drop-targets">
+            <div class="target" id="lock" data-accept="key"></div>
+            <div class="target" id="shelf" data-accept="book"></div>
+            <div class="target" id="toolbox" data-accept="hammer"></div>
+         </div>
+    </div>
+
+    <div id="message"></div>
+
+    <script src="room3.js"></script>
+</body>
+</html>
