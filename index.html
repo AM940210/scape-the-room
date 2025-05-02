@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <title>Escape the Room</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Escape the Room</h1>
+  <p>Det finns gömda nummer under alla föremål. kolla under varje föremål tills du hittar låsenordet till dörren.</p>
+
+  <div id="room1" class="room">
+    <img src="images/room.jpg" alt="Ett rum" id="background" usemap="#roommap">
+
+    <map name="roommap">
+      <area shape="rect" coords="80,160,140,90" href="#" alt="Backpag" data-hint="Ryggväskan visar siffran 3">
+      <area shape="circle" coords="390,200,20" href="#" alt="Jordklotet" data-hint="Jordklotet har siffran 1">
+      <area shape="rect" coords="400,300,500,360" href="#" alt="Matta" data-hint="Under mattan står siffran 7">
+    </map>
+
+    <div id="codeArea" hidden>
+        <p>Du ser ett kodlås! Ange 3-siffrig kod:</p>
+        <input type="text" id="codeInput" maxlength="3">
+        <button id="door">Lås upp dörren</button>
+    </div>
+  </div>
+
+  <div id="message"></div>
+  <script src="script.js"></script>
+</body>
+</html>
